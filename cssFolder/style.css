@@ -3,15 +3,12 @@
     display: none;
 }
 .header-container {
-    max-width: 1440px;
+    max-width: 1300px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-}
-.logo {
-    padding: 20px 0 17px 20px;
 }
 .nav-ul {
     display: flex;
@@ -42,7 +39,6 @@
 .navImg_box {
     display: flex;
     align-items: center;
-    padding: 10px 20px 10px 0;
 }
 .logo:hover,
 .nav-image img:hover,
@@ -50,18 +46,27 @@
     transition: 0.6s;
     transform: scale(1.5);
 }
-/* section II */
-
-.I_block {
+/* section I */
+.trending_block-Inner, .img_Block {
+    max-width: 1300px;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+.I_block {
+    display: flex;;
+    width: 100%;
+    height: auto;
 }
 .I_block-A {
     background-image:url(../img/first-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 840px;
-    width: 60%;
+    width: 100%;
     padding: 177px 100px 176px 140px;
 }
 .innerText{
@@ -104,10 +109,9 @@
     font-weight: bold;
 }
 .I_block-B {
-    max-width: 600px;
-    width: 100%;
+    width: 40%;
     height: auto;
-    padding: 100px 120px 100px 100px;
+    padding: 100px 100px 100px 100px;
     background-color: #ffff;
 }
 .arrows_block {
@@ -120,7 +124,7 @@
     width: 6px;
     height: 10px;
 }
-.arrows_block h2{
+.arrows_block h2, .arrows_blockI h2{
     text-transform: uppercase;
     font-family: 'Helvetica';
     font-weight: bold;
@@ -165,18 +169,9 @@
     margin-left: 10px;
 }  
 /* treding block */
-.trending_block-Inner{
-    max-width: 1160px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
 .trending_Box{
     display: flex;
     justify-content: space-evenly;
-}
-.st{
-    margin-top: 40px;
 }
 .text_Info h4{
     font-family: 'Helvetica';
@@ -190,8 +185,97 @@
     margin-top: 10px;
     margin-bottom: 5px;
 }
+/* img_block */
+.img_box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.big_img-box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.big_innerI{
+    margin-bottom: 40px;
+    background-image:url(../img/bridge.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 430px;
+    margin-bottom: 40px;
+    color: white;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.big_innerII{
+    background-image: url(../img/forrest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 430px;
+    color: white;
+    padding: 40px;
+}
+.big_img-text  h4 {
+    font-family: 'Helvetica';
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 232px;
+}
+.big_img-info h3{
+    font-family: 'Helvetica';
+    font-size: 24px;
+    font-weight: bold;
+}  
+.big_img-info p{
+    font-family: 'Helvetica';
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+    width: 85%;
+}
+.small_img-box{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+.space{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.small_img-box img{
+    width: 100%;
+}
+.text_Info h4{
+    font-family: 'Acumin Pro';
+    font-size: 16px;
+    font-weight: bold;
+}
 
 /* responsive */
+@media (max-width: 1270px) {
+    .small_img-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .small_img-box img{
+        width: 248px;
+        height: 144px;
+    }
+    .space{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .big_img-text  h4{
+        margin-bottom: 150px;
+    }
+}
 @media (max-width:1120px){
    .I_block{
        display: flex;
@@ -223,15 +307,30 @@
        margin-left: 5px;
    }
    .arrows_block{
-    display: flex;
-    justify-content: space-around;  
+    display: flex;  
     align-items: center; 
-
+    margin-top: 10px;
    }
    .trending_Box{
        display: flex;
        flex-direction: column;
        align-items: center;    
+    }
+    .trending_block-Inner, .img_Block-inner{
+        padding: 40px;
+    }
+    .small_img-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .space{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .big_img-text  h4{
+        margin-bottom: 100px;
     }
 }
 @media (max-width:668px) {
